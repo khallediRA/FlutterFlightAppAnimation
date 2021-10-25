@@ -96,15 +96,16 @@ class _FlightTimeLineState extends State<FlightTimeLine> {
                     const Duration(milliseconds: _cardAnimationDuration * 3)),
           ),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 1200),
-              right: centerDot,
-              top: animated ? 260 : constraint.maxHeight,
-              child: TimeLineDot(
-                  selected: false,
-                  left: true,
-                  displayCard: _animatedCard,
-                  delay: const Duration(
-                      milliseconds: _cardAnimationDuration * 4))),
+            duration: const Duration(milliseconds: 1200),
+            right: centerDot,
+            top: animated ? 260 : constraint.maxHeight,
+            child: TimeLineDot(
+              selected: false,
+              left: true,
+              displayCard: _animatedCard,
+              delay: const Duration(milliseconds: _cardAnimationDuration * 4),
+            ),
+          ),
           if (animatedButton)
             Align(
               alignment: Alignment.bottomCenter,
